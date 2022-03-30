@@ -31,12 +31,10 @@ PokeCard.init(
       }
     },
     image: {
-      type: DataTypes.BLOB,
-      allowNull: false
+      type: DataTypes.STRING,
     },
     backgroundimage: {
-      type: DataTypes.BLOB,
-      allowNull: false
+      type: DataTypes.STRING,
     },
     attack1name: {
       type: DataTypes.STRING,
@@ -61,13 +59,6 @@ PokeCard.init(
     attack2description: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    user_id:{
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
     }
     
   },
