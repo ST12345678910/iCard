@@ -1,8 +1,8 @@
 const loginFormHandler = async function (event) {
   event.preventDefault();
 
-  const usernameEl = document.querySelector('#username-input-login');
-  const passwordEl = document.querySelector('#password-input-login');
+  const usernameEl = document.querySelector('#email-address');
+  const passwordEl = document.querySelector('#password');
 
   const response = await fetch('/api/userRoutes/login', {
     method: 'POST',
