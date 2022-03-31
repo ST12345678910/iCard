@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="h-screen bg-gradient-to-r from-sky-500 to-indigo-500">
+  <body class="bg-gradient-to-r from-sky-500 to-indigo-500">
 <nav class="bg-gray-800">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+      <div class="absolute flex items-center sm:hidden">
         <!-- Mobile menu button-->
         <button type="button"
           class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white "
@@ -28,15 +28,14 @@
         </button>
       </div>
 
-      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+      <div class="flex-1 flex items-center justify-center sm:items-stretch">
         <div class="flex-shrink-0 flex items-center">
           <div class="block lg:block h-8 w-auto text-white px-3 rounded-md text-2xl font-medium">iCard</div>
             
         </div>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/" class="bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+            <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               aria-current="page">Home</a>
 
             <a href="/"
@@ -47,6 +46,7 @@
 
             <a href="/"
               class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+            <a href="/" class="text-gray-300 bg-green-600 text-neutral-50 px-5 py-2 rounded-md text-sm font-medium">Get Started</a>
           </div>
         </div>
       </div>
@@ -70,13 +70,16 @@
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
     </div>
   </div>
-
 </nav>
-<main class="col-auto">
+
+<div class="flex justify-center items-center h-screen">
   {{{body}}}
-</main>
+</div>
+
+
+
 </body>
-<script src="/js/logout.js"></script>
+<script src="/public/logout.js"></script>
 <script>
   const menu = document.getElementById('mobile-menu');
   const toggle = () => menu.classList.toggle("hidden");
