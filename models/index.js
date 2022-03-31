@@ -1,3 +1,4 @@
 const PokeCard = require('./pokecard.js')
+const User = require('./user.js')
 
-module.exports = { PokeCard }
+module.exports = { PokeCard, User };
