@@ -47,6 +47,10 @@
 
             <a href="/"
               class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+            
+            <a href="/api/user/login" 
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+
           </div>
         </div>
       </div>
@@ -64,10 +68,16 @@
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Profile</a>
 
       <a href="/"
-        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>`
 
       <a href="/"
         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+      
+      <a href="api/user/login"
+        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+
+      <a href="/api/user/signup"
+        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign Up</a>
     </div>
   </div>
 
@@ -75,8 +85,10 @@
 <main class="col-auto">
   {{{body}}}
 </main>
+<main class="col-auto">
+  {{{login}}}
+</main>
 </body>
-<script src="/js/logout.js"></script>
 <script>
   const menu = document.getElementById('mobile-menu');
   const toggle = () => menu.classList.toggle("hidden");

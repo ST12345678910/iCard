@@ -4,7 +4,7 @@ const loginFormHandler = async function (event) {
   const usernameEl = document.querySelector('#email-address');
   const passwordEl = document.querySelector('#password');
 
-  const response = await fetch('/api/userRoutes/login', {
+  const response = await fetch('/api/user/login', {
     method: 'POST',
     body: JSON.stringify({
       username: usernameEl.value,
@@ -14,7 +14,7 @@ const loginFormHandler = async function (event) {
   });
 
   if (response.ok) {
-    document.location.replace('/dashboard');
+    document.location.replace('/index');
   } else {
     alert('Failed to login');
   }
