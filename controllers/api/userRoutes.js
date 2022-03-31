@@ -6,7 +6,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('main', { layout: 'login' });
 });
 
 router.get('/signup', (req, res) => {
@@ -15,7 +15,7 @@ router.get('/signup', (req, res) => {
     return;
   }
 
-  res.render('signup');
+  res.render('main', { layout: 'signup' });
 });
 
 
