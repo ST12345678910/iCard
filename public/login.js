@@ -18,8 +18,10 @@ const loginFormHandler = async function (event) {
   } else {
     alert('Failed to login');
   }
+
+  document.location.replace('/');
 };
 
 document
   .querySelector('#login-form')
-  .addEventListener('submit', loginFormHandler);
+  .addEventListener('click', loginFormHandler);
