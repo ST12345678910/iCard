@@ -15,12 +15,12 @@ router.post('/signup', async (req, res) => {
 
       res.json(newUser);
     });
-    
+
   } catch (err) {
     res.status(500).json(err);
   }
 
-  document.location.replace('/');
+
 });
 
 router.post('/login', async (req, res) => {
@@ -50,11 +50,11 @@ router.post('/login', async (req, res) => {
 
       res.json({ user, message: 'You are now logged in!' });
     });
+
   } catch (err) {
     res.status(400).json({ message: 'No user account found!' });
   }
 
-  document.location.replace('/');
 });
 
 router.post('/logout', (req, res) => {
