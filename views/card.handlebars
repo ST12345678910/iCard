@@ -3,15 +3,138 @@
 </head>
 <section class="overflow-hidden text-gray-700">
   <div class="container lg:pt-12 lg:px-32">
-    <div class="flex flex-wrap --------">
+    <div class="md:flex no-flex-wrap md:columns-2 items-center --------">
 
-        <div class="w-full p-1 md:p-2">
-          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="basepoketemplate.png">
-        </div>
+      <div class="justify-self-center w-2/3">
+        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+          src="basepoketemplate.png">
       </div>
+
+      <div id="pokeCardForm" class="container ml-6" style="color: ; background-color: rgba(255, 255, 255, 0.35); ">
+        
+      {{!-- change the form action later on --}}
+      <form action=" ... " method="post">
+        <Label for="name">Name:</Label>
+        <input type="text" id="name" name="name">
+      
+        <br><br>
+        
+
+    
+        <Label for="type">Type:</Label>
+        <select name="type" id="type">
+          <option value="normal">Normal</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="grass">Grass</option>
+          <option value="electric">Electric</option>
+          <option value="lightning">Lightning</option>
+          <option value="fighting">Fighting</option>
+          <option value="pyschic">Psychic</option>
+          <option value="darkness">Darkness</option>
+          <option value="metal">Metal</option>
+          <option value="dragon">Dragon</option>
+          <option value="fairy">Fairy</option>
+        </select>
+        
+        <br><br>
+        <hr>
+        <br>
+        <div>
+          <Label for="type">Upload your picture:</Label>
+          <input
+            type="file"
+            name="image"
+            id="input-image"
+            class="form-control-file border"
+          />
+        </div>
+        
+        <br><br>
+        <hr>
+        <br>
+        
+        <Label for="attack1name">Attack 1 Name:</Label>
+        <input type="attack1name" id="attack1name" name="attack1name">
+      
+        <br><br>
+    
+        <Label for="attack1damage">Damage</Label>
+        <select name="attack1damage" id="attack1damage">
+          <option value="10">10</option>
+          <option value="10+">10+</option>
+          <option value="10x">10x</option>
+          <option value="20">20</option>
+          <option value="20+">20+</option>
+          <option value="20x">20x</option>
+          <option value="30">30</option>
+          <option value="30+">30+</option>
+          <option value="30x">30x</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+          <option value="70">70</option>
+          <option value="80">80</option>
+          <option value="90">90</option>
+          <option value="100">100</option>
+          <option value="120">120</option>
+          <option value="150">150</option>
+          <option value="200">200</option>
+        </select>
+      
+        <br><br>
+    
+        <Label for="attack1description">Attack 1 Description:</Label>
+        <input type="attack1description" id="attack1description" name="attack1description">
+    
+        <br><br>
+        <hr>
+        <br>
+
+        <Label for="attack2name">Attack 2 Name:</Label>
+        <input type="attack2name" id="attack2name" name="attack2name">
+    
+        <br><br>
+    
+        <Label for="attack2damage">Damage</Label>
+        <select name="attack2damage" id="attack2damage">
+          <option value="10">10</option>
+          <option value="10+">10+</option>
+          <option value="10x">10x</option>
+          <option value="20">20</option>
+          <option value="20+">20+</option>
+          <option value="20x">20x</option>
+          <option value="30">30</option>
+          <option value="30+">30+</option>
+          <option value="30x">30x</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+          <option value="70">70</option>
+          <option value="80">80</option>
+          <option value="90">90</option>
+          <option value="100">100</option>
+          <option value="120">120</option>
+          <option value="150">150</option>
+          <option value="200">200</option>
+        </select>
+    
+        <br><br>
+    
+        <Label for="attack2description">Attack 2 Description:</Label>
+        <input type="attack2description" id="attack2description" name="attack2description">
+
+        <br><br>
+        <input style="background: white; font-weight: bold" type="submit" formmethod="post" value="Generate">
+      </form>
+        
+
+      </div>
+
+    </div>
 
 
     
   </div>
 </section>
+
