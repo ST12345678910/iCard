@@ -3,9 +3,11 @@ const signupFormHandler = async function (event) {
 
   const usernameEl = document.querySelector('#email-address-signup').value;
   const passwordEl = document.querySelector('#password-signup').value;
+
   console.log(usernameEl)
   console.log(passwordEl)
-  const response = await fetch('/api/userRoutes/signup', {
+
+  const response = await fetch('/api/user/signup', {
     method: 'POST',
     body: JSON.stringify({
       username: usernameEl.value,
@@ -19,7 +21,7 @@ const signupFormHandler = async function (event) {
   } else {
     alert('Failed to sign up');
   }
-  console.log(body)
+
   document.location.replace('/');
 };
 
