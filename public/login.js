@@ -1,52 +1,25 @@
-window.onload = () => {
-  this.sessionStorage.setItem('username',);
-  this.sessionStorage.setItem('password',);
-}
+const loginFormHandler = async function (event) {
+  event.preventDefault();
 
-var input = document.getElementsByTagName('');
-var login = document.getElementById('');
-var form = document.querySelector('form');
-form.onsubmit = () => { return false; }
+  const usernameEl = document.querySelector('#email-address');
+  const passwordEl = document.querySelector('#password');
 
-login.onclick = () => {
+  const response = await fetch('/api/user/login', {
+    method: 'POST',
+    body: JSON.stringify({
+      username: usernameEl.value,
+      password: passwordEl.value,
+    }),
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-  if ((input[0].value != "") && (input[1].value != "")) {
-    if ((input[0].value == sessionStorage.getItem('username')) && (input[1].value == sessionStorage.getItem('password'))) {
-      form.onsubmit = () => { return 1; }
-      document.cookie = "username=" + input[0].value;
-      document.cookie = "password=" + input[1].value;
-    }
-    else {
-      if ((input[0].value != sessionStorage.getItem('username'))) {
-        input[0].nextElementSibling.textContent = "Username NOT match";
-        setTimeout(() => {
-          input[0].nextElementSibling.textContent = "";
-        }, 2000);
-
-      }
-      if ((input[1].value != sessionStorage.getItem('password'))) {
-        input[1].nextElementSibling.textContent = "Password NOT match";
-        setTimeout(() => {
-          input[1].nextElementSibling.textContent = "";
-        }, 2000);
-
-      }
-
-    }
-
+  if (response.ok) {
+    document.location.replace('/index');
+  } else {
+    alert('Failed to login');
   }
-  else {
-    if (input[0].value == "") {
-      input[0].nextElementSibling.textContent = "Username is empty";
-      setTimeout(() => {
-        input[0].nextElementSibling.textContent = "";
-      }, 2000);
-    }
-    if (input[1].value == "") {
-      input[1].nextElementSibling.textContent = "Password is empty";
-      setTimeout(() => {
-        input[1].nextElementSibling.textContent = "";
-      }, 2000);
-    }
-  }
-}
+};
+
+document
+  .querySelector('#login-form')
+  .addEventListener('submit', loginFormHandler);
