@@ -7,13 +7,13 @@
 
       <div class="justify-self-center w-2/3">
         <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-          src="basepoketemplate.png">
+          src="/assets/basepoketemplate.png">
       </div>
 
       <div id="pokeCardForm" class="container ml-6" style="color: ; background-color: rgba(255, 255, 255, 0.35); ">
         
       {{!-- change the form action later on --}}
-      <form action=" ... " method="post">
+      <form action="/api/card/create " method="post" id="newcard" enctype="multipart/form-data">
         <Label for="name">Name:</Label>
         <input type="text" id="name" name="name">
       
@@ -41,7 +41,7 @@
         <hr>
         <br>
         <div>
-          <Label for="type">Upload your picture:</Label>
+          <Label for="image">Upload your picture:</Label>
           <input
             type="file"
             name="image"
@@ -50,7 +50,7 @@
           />
         </div>
         
-        <br><br>
+        <br>
         <hr>
         <br>
         
@@ -125,7 +125,7 @@
         <input type="attack2description" id="attack2description" name="attack2description">
 
         <br><br>
-        <input style="background: white; font-weight: bold" type="submit" formmethod="post" value="Generate">
+        <button style="background: white; font-weight: bold" type="submit-btn" formenctype="multipart/form-data" formmethod="post">Generate</button>
       </form>
         
 
@@ -137,4 +137,6 @@
     
   </div>
 </section>
+
+<script src="/newcard.js"></script>
 

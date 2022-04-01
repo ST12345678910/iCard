@@ -1,5 +1,5 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize')
+const { Sequelize, Model, DataTypes } = require('sequelize')
 // import our database connection from config.js
 const sequelize = require('../config/connection')
 
@@ -24,17 +24,17 @@ PokeCard.init(
       allowNull: false
     },
     hp: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isDecimal: true
       }
     },
     image: {
-      type: DataTypes.STRING,
+      type: DataTypes.BLOB("long"),
     },
     backgroundimage: {
-      type: DataTypes.STRING,
+      type: DataTypes.BLOB("long"),
     },
     attack1name: {
       type: DataTypes.STRING,
@@ -66,7 +66,6 @@ PokeCard.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
     modelName: 'PokeCard'
   }
 )
