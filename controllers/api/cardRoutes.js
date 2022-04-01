@@ -19,13 +19,13 @@ router.get('/create', (req, res) => {
   res.render('card', { layout: 'index' });
 });
 
-router.post('/create', withAuth, async (req, res) => {
- 
+router.post('/create', async (req, res) => {
+ console.log(req.body)
 
   try {
     const newPokeCard = await PokeCard.create({
       ...req.body,
-      userId: req.session.userId,
+      
     });
     res.json(newPokeCard);
   } catch (err) {

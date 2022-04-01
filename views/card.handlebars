@@ -13,13 +13,16 @@
       <div id="pokeCardForm" class="container ml-6" style="color: ; background-color: rgba(255, 255, 255, 0.35); ">
         
       {{!-- change the form action later on --}}
-      <form action="/api/card/create " method="post" id="newcard" enctype="multipart/form-data">
+      <form  >
         <Label for="name">Name:</Label>
         <input type="text" id="name" name="name">
       
         <br><br>
         
-
+        <Label for="hp">Health Points:</Label>
+        <input type="text" id="hp" name="hp">
+      
+        <br><br>
     
         <Label for="type">Type:</Label>
         <select name="type" id="type">
@@ -125,7 +128,7 @@
         <input type="attack2description" id="attack2description" name="attack2description">
 
         <br><br>
-        <button style="background: white; font-weight: bold" type="submit-btn" formenctype="multipart/form-data" formmethod="post">Generate</button>
+        <button id="newCard" style="background: white; font-weight: bold" type="submit-btn" >Generate</button>
       </form>
         
 
