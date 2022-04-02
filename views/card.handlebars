@@ -1,31 +1,31 @@
 <head>
-  <title>Home: iCard</title>
+  <title>Create Your Own</title>
 </head>
 <section class="overflow-hidden text-gray-700">
-  <div class="container lg:pt-12 lg:px-32">
+  <div class="container lg:px-32">
     <div class="md:flex no-flex-wrap md:columns-2 items-center --------">
 
-      <div class="justify-self-center h-1/5">
-        <img alt="gallery" class="block object-cover object-center  rounded-lg"
-          src="/basepoketemplate.png">
-      </div>
+      <div class="relative flex flex-wrap h-1/5 justify-center items-center">
+        <div class="w-2/5">
+          <img alt="gallery" class="block object-cover object-center rounded-lg" src="/multicolorpoketemplate.png">
+        </div>
 
-      <div id="pokeCardForm" class="container ml-6" style="color: ; background-color: rgba(255, 255, 255, 0.35); ">
+      <div id="pokeCardForm" class="container bg-blue-300 bg-opacity-50 rounded-lg px-5 py-5">
         
       {{!-- change the form action later on --}}
-      <form  >
-        <Label for="name">Name:</Label>
-        <input type="text" id="name" name="name">
+      <form>
+        <Label for="name" class="text-sm font-medium text-gray-700">Name:</Label>
+        <input type="text" id="name" name="name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
       
         <br><br>
         
-        <Label for="hp">Health Points:</Label>
-        <input type="text" id="hp" name="hp">
+        <Label for="hp" class="text-sm font-medium text-gray-700">Health Points:</Label>
+        <input type="text" id="hp" name="hp" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
       
         <br><br>
     
-        <Label for="type">Type:</Label>
-        <select name="type" id="type">
+        <Label for="type" class="text-sm font-medium text-gray-700">Type:</Label>
+        <select name="type" id="type" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
           <option value="normal">Normal</option>
           <option value="fire">Fire</option>
           <option value="water">Water</option>
@@ -44,7 +44,7 @@
         <hr>
         <br>
         <div>
-          <Label for="image">Upload your picture:</Label>
+          <Label for="image" class="text-sm font-medium text-gray-700">Upload your picture:</Label>
           <input
             type="file"
             name="image"
@@ -57,13 +57,13 @@
         <hr>
         <br>
         
-        <Label for="attack1name">Attack 1 Name:</Label>
-        <input type="attack1name" id="attack1name" name="attack1name">
+        <Label for="attack1name" class="text-sm font-medium text-gray-700">Attack 1 Name:</Label>
+        <input type="attack1name" id="attack1name" name="attack1name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
       
         <br><br>
     
-        <Label for="attack1damage">Damage</Label>
-        <select name="attack1damage" id="attack1damage">
+        <Label for="attack1damage" class="text-sm font-medium text-gray-700">Damage</Label>
+        <select name="attack1damage" id="attack1damage" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
           <option value="10">10</option>
           <option value="10+">10+</option>
           <option value="10x">10x</option>
@@ -87,20 +87,20 @@
       
         <br><br>
     
-        <Label for="attack1description">Attack 1 Description:</Label>
-        <input type="attack1description" id="attack1description" name="attack1description">
+        <Label for="attack1description" class="text-sm font-medium text-gray-700">Attack 1 Description:</Label>
+        <input type="attack1description" id="attack1description" name="attack1description" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
     
         <br><br>
         <hr>
         <br>
 
-        <Label for="attack2name">Attack 2 Name:</Label>
-        <input type="attack2name" id="attack2name" name="attack2name">
+        <Label for="attack2name" class="text-sm font-medium text-gray-700">Attack 2 Name:</Label>
+        <input type="attack2name" id="attack2name" name="attack2name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
     
         <br><br>
     
-        <Label for="attack2damage">Damage</Label>
-        <select name="attack2damage" id="attack2damage">
+        <Label for="attack2damage" class="text-sm font-medium text-gray-700">Damage</Label>
+        <select name="attack2damage" id="attack2damage" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
           <option value="10">10</option>
           <option value="10+">10+</option>
           <option value="10x">10x</option>
@@ -124,22 +124,18 @@
     
         <br><br>
     
-        <Label for="attack2description">Attack 2 Description:</Label>
-        <input type="attack2description" id="attack2description" name="attack2description">
+        <Label for="attack2description" class="text-sm font-medium text-gray-700">Attack 2 Description:</Label>
+        <input type="attack2description" id="attack2description" name="attack2description" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
 
         <br><br>
-        <button id="newCard" style="background: white; font-weight: bold" type="submit-btn" >Generate</button>
-      </form>
-        
-
-      </div>
-
-    </div>
-
-
+        <div class="px-4 py-3 text-right sm:px-6">
+        <button id="newCard" type="submit-btn" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Generate</button>
+        </div>
+      </form>                   
     
   </div>
 </section>
 
 <script src="/newcard.js"></script>
 
+{{!-- class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" --}}
