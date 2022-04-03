@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   })
 })
 
-router.get('/create', (req, res) => {
+router.get('/create', withAuth, (req, res) => {
   
   res.render('card', { layout: 'index' });
 });
