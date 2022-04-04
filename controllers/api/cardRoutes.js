@@ -42,9 +42,32 @@ router.get('/gallery', async (req, res) => {
       });
   
   const PokeCards = cardData.map((PokeCard) => PokeCard.get({ plain: true }));
-  res.render('viewcard', { layout: 'gallery', PokeCards })
+  
+  res.render('gallery', { layout: 'index', PokeCards })
+
 
   
+});
+
+router.get('/gallery',withAuth, async (req, res) => {
+
+
+
+  const cardData = await PokeCard.findAll().catch((err) => {
+    res.json(err);
+  });
+
+  const PokeCards = cardData.map((PokeCard) => PokeCard.get({ plain: true }));
+
+  res.render('gallery', { layout: 'loggedin', PokeCards })
+
+
+
+});
+
+router.get('/aboutus', withAuth, (req, res) => {
+
+  res.render('aboutus', { layout: 'loggedin' });
 });
 
 module.exports = router;

@@ -1,3 +1,19 @@
+<div>
+{{#each PokeCards as |PokeCard|}}
+  <div class=" list-item flex-row justify-space-between">
+    
+    <ul>
+      <li>
+      {{PokeCard.name}}
+      {{PokeCard.type}}
+      </li>
+    </ul>
+    
+  </div>
+  
+{{/each}}
+</div>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,21 +54,24 @@
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              <a href="/"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 aria-current="page">Home</a>
 
               <a href="/api/card/gallery"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Gallery</a>
 
               <a href="/api/card/create"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Create Your Own</a>
+                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Create
+                Your Own</a>
 
-              <a href="/"
+              <a href="/api/user/login"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
                 Us</a>
 
-              <a href="/api/user/login"
+              <a href="/api/user/login" id="userLogin" type="click"
                 class="text-gray-300 bg-green-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+
 
             </div>
           </div>
@@ -64,30 +83,31 @@
     <div class="hidden" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1">
 
-        <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        <a href="/"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
           aria-current="page">Home</a>
 
         <a href="/api/card/create"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Create Your Own</a>
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Create
+          Your Own</a>
 
         <a href="/api/card/gallery"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
 
-        <a href="/"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+        <a href="/api/card/aboutus"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About
+          Us</a>
 
-        <a href="api/user/login"
+        <a href="api/user/login" id="userLogin" type="click"
           class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
 
-        <a href="/api/user/signup"
-          class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign Up</a>
       </div>
     </div>
 
-</nav>
-<main class="flex justify-center items-center h-3/6">
-  {{{body}}}
-</main>
+  </nav>
+  <main class="flex justify-center items-center h-3/6">
+    {{{body}}}
+  </main>
 </body>
 <script>
   const menu = document.getElementById('mobile-menu');
