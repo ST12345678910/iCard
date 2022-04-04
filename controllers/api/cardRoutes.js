@@ -43,9 +43,17 @@ router.get('/gallery', async (req, res) => {
       });
   
   const PokeCards = cardData.map((PokeCard) => PokeCard.get({ plain: true }));
-  res.render('viewcard', { layout: 'gallery', PokeCards })
+  
+  res.render('gallery', { layout: 'index', PokeCards })
+
 
   
+});
+
+
+router.get('/aboutus', withAuth, (req, res) => {
+
+  res.render('aboutus', { layout: 'loggedin' });
 });
 
 module.exports = router;
