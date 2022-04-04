@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const User = require('../../models/user.js');
+const withAuth = require('../../utils/auth');
 
 router.post('/signup', async (req, res) => {
   try {
@@ -11,9 +12,10 @@ router.post('/signup', async (req, res) => {
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.username = newUser.username;
-      req.session.loggedIn = true;
+      // req.session.loggedIn = true;
 
       res.json(newUser);
+      
     });
 
   } catch (err) {
@@ -47,9 +49,9 @@ router.post('/login', async (req, res) => {
       req.session.userId = user.id;
       req.session.username = user.username;
       req.session.loggedIn = true;
-
       res.json({ user, message: 'You are now logged in!' });
     });
+    console.log("You are now logged in!")
 
   } catch (err) {
     res.status(400).json({ message: 'No user account found!' });
@@ -57,31 +59,30 @@ router.post('/login', async (req, res) => {
 
 });
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
+      
     });
+    
+    console.log("You are now logged out!")
+    res.render('login', { layout: 'index' })
+
   } else {
     res.status(404).end();
+    
+    console.log("You are currently not logged in.")
   }
 });
 
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/main');
-    return;
-  }
 
   res.render('login', { layout: 'index' });
 });
 
 router.get('/signup', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/main');
-    return;
-  }
 
   res.render('signup', { layout: 'index' });
 });

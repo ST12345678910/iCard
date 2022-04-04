@@ -14,9 +14,9 @@ router.get('/', (req, res) => {
   })
 })
 
-router.get('/create', (req, res) => {
+router.get('/create', withAuth, (req, res) => {
   
-  res.render('card', { layout: 'index' });
+  res.render('card', { layout: 'loggedin' });
 });
 
 router.post('/create', async (req, res) => {
@@ -27,10 +27,33 @@ router.post('/create', async (req, res) => {
       ...req.body,
       
     });
-    res.json(newPokeCard);
+    console.log(newPokeCard);
+    
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/gallery', async (req, res) => {
+  
+  
+
+  const cardData = await PokeCard.findAll().catch((err) => { 
+        res.json(err);
+      });
+  
+  const PokeCards = cardData.map((PokeCard) => PokeCard.get({ plain: true }));
+  
+  res.render('gallery', { layout: 'index', PokeCards })
+
+
+  
+});
+
+
+router.get('/aboutus', withAuth, (req, res) => {
+
+  res.render('aboutus', { layout: 'loggedin' });
 });
 
 module.exports = router;
