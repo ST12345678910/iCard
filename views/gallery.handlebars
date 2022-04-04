@@ -1,12 +1,15 @@
 
 {{#each PokeCards as |PokeCard|}}
-<div class=" list-item flex-row justify-space-between">
+<div class="list-item flex-row justify-space-between list-none">
 
-  <ul>
-    <li>
-      {{PokeCard.name}}
-      {{PokeCard.type}}
-      <img src="{{PokeCard.image}}"></img>
+  <ul class="list-none">
+    <li class="list-none">
+
+      <div class="container relative">
+      <div class="absolute pt-6 pl-32">{{PokeCard.name}}</div>
+      <img src="{{PokeCard.type}}"></img>
+      </div>
+      
     </li>
   </ul>
 
