@@ -19,7 +19,7 @@ router.get('/create', withAuth, (req, res) => {
   res.render('card', { layout: 'loggedin' });
 });
 
-router.post('/create', async (req, res) => {
+router.post('/create',withAuth, async (req, res) => {
  console.log(req.body)
 
   try {
@@ -43,9 +43,11 @@ router.get('/gallery', async (req, res) => {
   
   const PokeCards = cardData.map((PokeCard) => PokeCard.get({ plain: true }));
   
-  res.render('gallery', { layout: 'index', PokeCards })
-
-
+  if(req.session.loggedIn){
+    res.render('gallery', { layout: 'loggedin', PokeCards })
+  }else{
+    res.render('gallery', { layout: 'index', PokeCards })
+  }
   
 });
 
