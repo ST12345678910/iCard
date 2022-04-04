@@ -27,7 +27,8 @@ router.post('/create', async (req, res) => {
       ...req.body,
       
     });
-    res.json(newPokeCard);
+    console.log(newPokeCard);
+    
   } catch (err) {
     res.status(500).json(err);
   }

@@ -49,7 +49,7 @@ const newFormHandler =  function(event) {
 
   console.log("test");
 
-  document.location.replace('/');
+  document.location.replace('/loggedin');
 };
 
 document
