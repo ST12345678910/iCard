@@ -22,7 +22,7 @@ const signupFormHandler = async function (event) {
     alert('Failed to sign up');
   }
 
-  document.location.replace('/');
+  // document.location.replace('/');
 };
 
 document

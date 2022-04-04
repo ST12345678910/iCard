@@ -19,7 +19,7 @@ const loginFormHandler = async function (event) {
     alert('Failed to login');
   }
 
-  document.location.replace('/');
+  // document.location.replace('/');
 };
 
 document
