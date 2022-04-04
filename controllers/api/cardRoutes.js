@@ -33,4 +33,18 @@ router.post('/create', async (req, res) => {
   }
 });
 
+router.get('/gallery', async (req, res) => {
+  
+  
+
+  const cardData = await PokeCard.findAll().catch((err) => { 
+        res.json(err);
+      });
+  
+  const PokeCards = cardData.map((PokeCard) => PokeCard.get({ plain: true }));
+  res.render('viewcard', { layout: 'gallery', PokeCards })
+
+  
+});
+
 module.exports = router;
