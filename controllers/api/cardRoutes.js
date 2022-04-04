@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 router.get('/create', withAuth, (req, res) => {
   
-  res.render('card', { layout: 'index' });
+  res.render('card', { layout: 'loggedin' });
 });
 
 router.post('/create', async (req, res) => {
