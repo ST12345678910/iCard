@@ -12,7 +12,12 @@
 
       <div id="pokeCardForm" class="container bg-blue-300 bg-opacity-50 rounded-lg px-5 py-5">
         
-      {{!-- change the form action later on --}}
+      <form class="mt-4" action="/profile" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <input type="file" name="file" id="input-files" class="form-control-file border" />
+          </div>
+          <button type="click" class="btn btn-primary">Submit</button>
+        </form>
       <form>
         <Label for="name" class="text-sm font-medium text-gray-700">Name:</Label>
         <input type="text" id="name" name="name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
@@ -44,6 +49,7 @@
         <hr>
         <br>
         <div>
+          
           <Label for="image" class="text-sm font-medium text-gray-700">Upload your picture:</Label>
           <input
             type="file"

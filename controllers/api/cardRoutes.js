@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const PokeCard = require("../../models/pokecard.js");
 const withAuth = require('../../utils/auth.js');
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' })
 
 router.get('/', (req, res) => {
   // find all products
@@ -34,6 +36,17 @@ router.post('/create', withAuth, async (req, res) => {
     console.log("CardRouteError")
   }
 });
+
+router.post('/image', upload.single('image'), function (req, res, next) {
+  // req.file is the `avatar` file
+  console.log(req.file)
+  // req.body will hold the text fields, if there were any
+})
+
+
+const uploadController = require("../../controllers/upload.js");
+const uploadimg = require("../../middleware/upload");
+router.post("/profile", uploadimg.single("file"), uploadController.uploadFiles);
 
 router.get('/gallery', async (req, res) => {
 

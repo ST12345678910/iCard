@@ -7,7 +7,7 @@ const newFormHandler =  function(event) {
   const name = document.querySelector('input[name="name"]').value;
   const hp = document.querySelector('input[name="hp"]').value;
   const type = document.querySelector('select[name="type"]').value;
-  const image = document.querySelector('input[name="image"]').value;
+  const image = document.getElementById("input-image").files[0].name;
   const attack1name = document.querySelector('input[name="attack1name"]').value;
   const attack1damage = document.querySelector('select[name="attack1damage"]').value;
   const attack1description = document.querySelector('input[name="attack1description"]').value;
@@ -47,7 +47,7 @@ const newFormHandler =  function(event) {
     
   }).catch((error) => (console.log(error)));
 
-  console.log("NewCardError");
+  console.log(image);
 
   document.location.replace('/api/card/gallery');
 };
