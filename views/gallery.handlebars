@@ -1,12 +1,22 @@
 
 {{#each PokeCards as |PokeCard|}}
-<div class=" list-item flex-row justify-space-between">
+<div class="list-item flex-row justify-space-between list-none">
 
-  <ul>
-    <li>
-      {{PokeCard.name}}
-      {{PokeCard.type}}
-      <img src="{{PokeCard.image}}"></img>
+  <ul class="list-none">
+    <li class="list-none">
+
+      <div class="container relative px-1 py-3">
+      <div class="absolute pt-6 pl-32 font-semibold">{{PokeCard.name}}</div>
+      <div class="absolute pt-80 pl-32 font-semibold">{{PokeCard.attack1name}}</div>
+      <div class="absolute pt-80 pl-80">{{PokeCard.attack1damage}}</div>
+      <div class="absolute pl-10 font-medium" style="padding-top: 340px;">{{PokeCard.attack1description}}</div>
+      <div class="absolute pt-96 pl-32 font-semibold">{{PokeCard.attack2name}}</div>
+      <div class="absolute pt-96 pl-80 ">{{PokeCard.attack2damage}}</div>
+      <div class="absolute pl-10 font-medium" style="padding-top: 410px;">{{PokeCard.attack2description}}</div>
+      <div class="absolute pt-6 pl-72 text-2xl"><span style="font-size: 12px" class="pl-4">HP</span>{{PokeCard.hp}}</div>
+      <img src="{{PokeCard.type}}"></img>
+      </div>
+      
     </li>
   </ul>
 
