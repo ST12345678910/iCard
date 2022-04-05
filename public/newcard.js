@@ -15,18 +15,18 @@ const newFormHandler =  function(event) {
   const attack2damage = document.querySelector('select[name="attack2damage"]').value;
   const attack2description = document.querySelector('input[name="attack2description"]').value;
 
-  console.log({
-      name,
-      hp,
-      type,
-      image,
-      attack1name,
-      attack1damage,
-      attack1description,
-      attack2name,
-      attack2damage,
-      attack2description,
-    })
+  // console.log({
+  //     name,
+  //     hp,
+  //     type,
+  //     image,
+  //     attack1name,
+  //     attack1damage,
+  //     attack1description,
+  //     attack2name,
+  //     attack2damage,
+  //     attack2description,
+  //   })
 
    fetch(`/api/card/create`, {
     method: 'POST',
@@ -47,9 +47,9 @@ const newFormHandler =  function(event) {
     
   }).catch((error) => (console.log(error)));
 
-  console.log("test");
+  console.log("NewCardError");
 
-  document.location.replace('/loggedin');
+  document.location.replace('/api/card/gallery');
 };
 
 document

@@ -68,7 +68,7 @@ router.get('/logout', (req, res) => {
     
     console.log("You are now logged out!")
     res.redirect('/')
-
+    
   } else {
     res.status(404).end();
     

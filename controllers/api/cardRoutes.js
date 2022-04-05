@@ -19,36 +19,38 @@ router.get('/create', withAuth, (req, res) => {
   res.render('card', { layout: 'loggedin' });
 });
 
-router.post('/create',withAuth, async (req, res) => {
- console.log(req.body)
+router.post('/create', withAuth, async (req, res) => {
+//  console.log(req.body)
 
   try {
     const newPokeCard = await PokeCard.create({
       ...req.body,
       
     });
-    res.json(newPokeCard);
+    // console.log(newPokeCard);
+    
   } catch (err) {
     res.status(500).json(err);
+    console.log("CardRouteError")
   }
 });
 
 router.get('/gallery', async (req, res) => {
-  
-  
 
-  const cardData = await PokeCard.findAll().catch((err) => { 
-        res.json(err);
-      });
-  
+
+
+  const cardData = await PokeCard.findAll().catch((err) => {
+    res.json(err);
+  });
+
   const PokeCards = cardData.map((PokeCard) => PokeCard.get({ plain: true }));
-  
-  if(req.session.loggedIn){
+
+  if (req.session.loggedIn) {
     res.render('gallery', { layout: 'loggedin', PokeCards })
-  }else{
+  } else {
     res.render('gallery', { layout: 'index', PokeCards })
   }
-  
+
 });
 
 
