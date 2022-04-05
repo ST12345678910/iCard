@@ -11,7 +11,7 @@
 - [Questions](#questions)
  ![icard](icardreadmepic.png)
 ## Installation
-The application is deployed on Heroku <code>here</code>. No installation neccesary.
+The application is deployed on Heroku <code>[here](https://icardcreator.herokuapp.com/)</code>. No installation neccesary.
 ## Usage
  The user is able to view the gallery and the about us page without being logged in. Once the user is logged in, then they are able to create their own cards they can then view in the gallery.
 ## Contributing
