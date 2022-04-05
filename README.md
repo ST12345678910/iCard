@@ -2,7 +2,7 @@
 <img src="https://img.shields.io/badge/License-MIT-blue.svg">
 
 ## Description
- 
+ Have you ever thought your cute pet or favorite anime character deserves their own game card? Or you wanted to see your favorite pokemon with a different typing and cool moves? Why not make your own? Using iCard, you can upload and make your own card from a selection of trading card games.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
