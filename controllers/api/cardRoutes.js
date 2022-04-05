@@ -54,9 +54,6 @@ router.get('/gallery', async (req, res) => {
 });
 
 
-router.get('/aboutus', withAuth, (req, res) => {
 
-  res.render('aboutus', { layout: 'loggedin' });
-});
 
 module.exports = router;

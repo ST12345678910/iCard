@@ -12,5 +12,13 @@ router.get('/loggedin', (req, res) => {
   res.render('main', { layout: 'loggedin' });
 });
 
+router.get('/aboutus', (req, res) => {
+
+  if (req.session.loggedIn) {
+    res.render('aboutus', { layout: 'loggedin' })
+  } else {
+    res.render('aboutus', { layout: 'index'})
+  }
+});
 
 module.exports = router;
