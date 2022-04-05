@@ -19,4 +19,4 @@ The application is deployed on Heroku <code>here</code>. No installation neccesa
 ## Tests
  n/a
 ## Questions
-If you have any questions about the project or repository, open an issue or contact us at: (shaun.tehranchi@gmail.com Github@ST12345678910), (), (), ()
+If you have any questions about the project or repository, open an issue or contact us at: (shaun.tehranchi@gmail.com Github@ST12345678910), (koreyluu@gmail.com Github@ahrionic), (), ()
