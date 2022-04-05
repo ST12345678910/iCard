@@ -49,7 +49,7 @@ const newFormHandler =  function(event) {
 
   console.log("NewCardError");
 
-  document.location.replace('/loggedin');
+  document.location.replace('/api/card/gallery');
 };
 
 document
