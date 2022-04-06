@@ -2,7 +2,8 @@
 <img src="https://img.shields.io/badge/License-MIT-blue.svg">
 
 ## Description
- Have you ever thought your cute pet or favorite anime character deserves their own game card? Or you wanted to see your favorite Pokemon with a different typing and cool moves? Why not make your own? Using iCard, you can upload and make your own card from a selection of trading card games.
+ Have you ever thought your cute pet or favorite anime character deserves their own game card? Or you wanted to see your favorite Pokemon with a different typing and cool moves? Why not make your own? Using iCard, you can upload and make your own card from a selection of trading card games. 
+ *---DISCLAIMER--- (User image input is being modified, and will be avaialble again shortly)*
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -11,7 +12,7 @@
 - [Questions](#questions)
  ![icard](icardreadmepic.png)
 ## Installation
-The application is deployed on Heroku <code>here</code>. No installation neccesary.
+The application is deployed on Heroku <code>[here](https://icardcreator.herokuapp.com/)</code>. No installation neccesary.
 ## Usage
  The user is able to view the gallery and the about us page without being logged in. Once the user is logged in, then they are able to create their own cards they can then view in the gallery.
 ## Contributing
